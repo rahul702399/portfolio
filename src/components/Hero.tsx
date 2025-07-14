@@ -51,9 +51,9 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
       )}
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
-          <div className="text-center lg:text-left space-y-8">
+        <div className="flex items-center justify-center">
+          {/* Main content - centered */}
+          <div className="text-center space-y-8 max-w-4xl">
             {/* Main Headline with enhanced styling */}
             <div className="space-y-4">
               <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight ${
@@ -78,7 +78,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
             </div>
 
             {/* Description with better spacing */}
-            <p className={`text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed ${
+            <p className={`text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed ${
               darkMode ? 'text-gray-400' : 'text-gray-600'
             }`}>
               Passionate about cloud automation, CI/CD pipelines, and modern development practices. 
@@ -86,7 +86,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
             </p>
 
             {/* Enhanced Social Links */}
-            <div className="flex justify-center lg:justify-start space-x-6">
+            <div className="flex justify-center space-x-6">
               <a
                 href="mailto:rahul702399@gmail.com"
                 className="group relative p-4 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white transform hover:scale-110 transition-all duration-300 hover:shadow-2xl"
@@ -138,68 +138,6 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
                 )}
               </button>
-            </div>
-          </div>
-
-          {/* Right side - Profile Picture */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative group">
-              {/* Outer glow ring */}
-              <div className={`absolute -inset-4 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20 blur-lg group-hover:opacity-30 transition-all duration-500 ${
-                darkMode ? 'opacity-30' : 'opacity-20'
-              }`} />
-              
-              {/* Middle ring */}
-              <div className={`absolute -inset-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-40 blur-md group-hover:opacity-60 transition-all duration-500 ${
-                darkMode ? 'opacity-50' : 'opacity-40'
-              }`} />
-              
-              {/* Profile image container */}
-              <div className="relative">
-                <div className={`w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-cyan-400 to-blue-500 group-hover:scale-105 transition-all duration-500 ${
-                  darkMode ? 'border-cyan-400/50' : 'border-cyan-400/30'
-                } flex items-center justify-center bg-gradient-to-br ${
-                  darkMode ? 'from-gray-800 to-gray-700' : 'from-gray-100 to-gray-200'
-                }`}>
-                  <div className="text-center">
-                    <div className="text-6xl sm:text-8xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
-                      RS
-                    </div>
-                    <div className={`text-lg font-medium ${
-                      darkMode ? 'text-gray-300' : 'text-gray-600'
-                    }`}>
-                      DevOps Engineer
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Floating particles around image */}
-                {darkMode && (
-                  <div className="absolute inset-0">
-                    {[...Array(8)].map((_, i) => (
-                      <div
-                        key={`profile-particle-${i}`}
-                        className="absolute w-2 h-2 bg-cyan-400/60 rounded-full animate-pulse"
-                        style={{
-                          left: `${10 + Math.random() * 80}%`,
-                          top: `${10 + Math.random() * 80}%`,
-                          animationDelay: `${Math.random() * 3}s`,
-                          animationDuration: `${2 + Math.random() * 2}s`
-                        }}
-                      />
-                    ))}
-                  </div>
-                )}
-                
-                {/* Professional badge */}
-                <div className={`absolute -bottom-4 -right-4 px-4 py-2 rounded-full border backdrop-blur-sm ${
-                  darkMode 
-                    ? 'bg-gray-900/80 border-cyan-400/50 text-cyan-400' 
-                    : 'bg-white/80 border-cyan-400/50 text-cyan-600'
-                }`}>
-                  <span className="text-sm font-medium">DevOps Engineer</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
