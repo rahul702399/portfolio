@@ -158,12 +158,19 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
               <div className="relative">
                 <div className={`w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-cyan-400 to-blue-500 group-hover:scale-105 transition-all duration-500 ${
                   darkMode ? 'border-cyan-400/50' : 'border-cyan-400/30'
+                } flex items-center justify-center bg-gradient-to-br ${
+                  darkMode ? 'from-gray-800 to-gray-700' : 'from-gray-100 to-gray-200'
                 }`}>
-                  <img
-                    src="/profile-picture.jpg"
-                    alt="Rahul Saini - DevOps Engineer"
-                    className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
-                  />
+                  <div className="text-center">
+                    <div className="text-6xl sm:text-8xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
+                      RS
+                    </div>
+                    <div className={`text-lg font-medium ${
+                      darkMode ? 'text-gray-300' : 'text-gray-600'
+                    }`}>
+                      DevOps Engineer
+                    </div>
+                  </div>
                 </div>
                 
                 {/* Floating particles around image */}
