@@ -20,7 +20,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "Generate comprehensive reports"
       ],
       githubUrl: "https://github.com/rahul702399/Automation-panel-using-Streamlit/blob/main/stautopanel.py",
-      linkedinUrl: "https://www.linkedin.com/posts/rahul-saini-91ba0a339_python-gradio-automation-activity-7349791619694383104-tDxM"
+      linkedinUrl: "https://www.linkedin.com/posts/rahul-saini-91ba0a339_python-gradio-automation-activity-7349791619694383104-tDxM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFULkKcB4Mg5xe1FJMZ_jC8bUREzwPwNgGg"
     },
     {
       title: "Automated CI/CD Pipeline",
