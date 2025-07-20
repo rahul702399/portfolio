@@ -88,7 +88,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
             {/* Enhanced Social Links */}
             <div className="flex justify-center space-x-6">
               <a
-                href="mailto:rahul702399@gmail.com"
+                href="mailto:rahulsaini70238@gmail.com"
                 className="group relative p-4 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white transform hover:scale-110 transition-all duration-300 hover:shadow-2xl"
               >
                 <Mail className="h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />

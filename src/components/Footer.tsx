@@ -23,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
     },
     {
       icon: <Mail className="h-5 w-5" />,
-      href: "mailto:rahul702399@gmail.com",
+      href: "mailto:rahulsaini70238@gmail.com",
       label: "Email"
     }
   ];
@@ -106,7 +106,7 @@ const Footer: React.FC<FooterProps> = ({ darkMode }) => {
             <div className="space-y-2 text-sm">
               <p className="text-gray-400">
                 <span className="text-gray-300">Email:</span><br />
-                rahul702399@gmail.com
+                rahulsaini70238@gmail.com
               </p>
               <p className="text-gray-400">
                 <span className="text-gray-300">Location:</span><br />

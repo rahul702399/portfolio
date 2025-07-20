@@ -48,8 +48,8 @@ const Contact: React.FC<ContactProps> = ({ darkMode }) => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      value: "rahul702399@gmail.com",
-      link: "mailto:rahul702399@gmail.com"
+      value: "rahulsaini70238@gmail.com",
+      link: "mailto:rahulsaini70238@gmail.com"
     },
     {
       icon: <Github className="h-6 w-6" />,
