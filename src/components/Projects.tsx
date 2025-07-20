@@ -8,6 +8,21 @@ interface ProjectsProps {
 const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
   const projects = [
     {
+      title: "🚀 Automation Panel using Gradio",
+      description: "A comprehensive automation panel built with Gradio that streamlines various tasks including running automation scripts, backing up files, sending emails, and generating reports.",
+      technologies: ["Python", "Gradio", "Automation", "File Management", "Email"],
+      icon: <Server className="h-8 w-8" />,
+      gradient: "from-green-400 to-cyan-500",
+      features: [
+        "Run automation scripts",
+        "Backup files automatically",
+        "Send emails programmatically",
+        "Generate comprehensive reports"
+      ],
+      githubUrl: "https://github.com/rahul702399/Automation-panel-using-Streamlit/blob/main/stautopanel.py",
+      linkedinUrl: "https://www.linkedin.com/posts/rahul-saini-91ba0a339_python-gradio-automation-activity-7349791619694383104-tDxM"
+    },
+    {
       title: "Automated CI/CD Pipeline",
       description: "Built a comprehensive CI/CD pipeline using Jenkins, Docker, and Kubernetes for automated testing, building, and deployment of web applications.",
       technologies: ["Jenkins", "Docker", "Kubernetes", "GitHub Actions", "AWS"],
@@ -18,7 +33,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "Zero-downtime deployments",
         "Multi-environment support",
         "Rollback capabilities"
-      ]
+      ],
+      githubUrl: "#",
+      linkedinUrl: "#"
     },
     {
       title: "Cloud Infrastructure Automation",
@@ -31,7 +48,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "Resource optimization",
         "Cost monitoring",
         "Disaster recovery"
-      ]
+      ],
+      githubUrl: "#",
+      linkedinUrl: "#"
     },
     {
       title: "Microservices Architecture",
@@ -44,7 +63,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "Load balancing",
         "Circuit breakers",
         "Distributed tracing"
-      ]
+      ],
+      githubUrl: "#",
+      linkedinUrl: "#"
     },
     {
       title: "Database Migration Tool",
@@ -57,7 +78,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "Data validation",
         "Automatic rollbacks",
         "Performance optimization"
-      ]
+      ],
+      githubUrl: "#",
+      linkedinUrl: "#"
     },
     {
       title: "Monitoring & Alerting System",
@@ -70,7 +93,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "Custom dashboards",
         "Smart alerting",
         "Incident automation"
-      ]
+      ],
+      githubUrl: "#",
+      linkedinUrl: "#"
     },
     {
       title: "Security Automation Pipeline",
@@ -83,7 +108,9 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         "Security testing",
         "Compliance reporting",
         "Secret management"
-      ]
+      ],
+      githubUrl: "#",
+      linkedinUrl: "#"
     }
   ];
 
@@ -121,16 +148,26 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                     {project.icon}
                   </div>
                   <div className="flex space-x-2">
-                    <button className={`p-2 rounded-lg transition-colors duration-200 ${
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-2 rounded-lg transition-colors duration-200 ${
                       darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
-                    }`}>
+                    }`}
+                    >
                       <Github className="h-5 w-5" />
-                    </button>
-                    <button className={`p-2 rounded-lg transition-colors duration-200 ${
+                    </a>
+                    <a
+                      href={project.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-2 rounded-lg transition-colors duration-200 ${
                       darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
-                    }`}>
+                    }`}
+                    >
                       <ExternalLink className="h-5 w-5" />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 
