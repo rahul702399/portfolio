@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Server, Database, Cloud, GitBranch, Mail } from 'lucide-react';
+import { ExternalLink, Github, Server, Mail } from 'lucide-react';
 
 interface ProjectsProps {
   darkMode: boolean;
@@ -36,96 +36,6 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       ],
       githubUrl: "https://github.com/rahul702399/Automation-panel-using-Streamlit/blob/main/stautopanel.py",
       linkedinUrl: "https://www.linkedin.com/posts/rahul-saini-91ba0a339_python-gradio-automation-activity-7349791619694383104-tDxM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFULkKcB4Mg5xe1FJMZ_jC8bUREzwPwNgGg"
-    },
-    {
-      title: "Automated CI/CD Pipeline",
-      description: "Built a comprehensive CI/CD pipeline using Jenkins, Docker, and Kubernetes for automated testing, building, and deployment of web applications.",
-      technologies: ["Jenkins", "Docker", "Kubernetes", "GitHub Actions", "AWS"],
-      icon: <GitBranch className="h-8 w-8" />,
-      gradient: "from-cyan-400 to-blue-500",
-      features: [
-        "Automated testing with 99% code coverage",
-        "Zero-downtime deployments",
-        "Multi-environment support",
-        "Rollback capabilities"
-      ],
-      githubUrl: "#",
-      linkedinUrl: "#"
-    },
-    {
-      title: "Cloud Infrastructure Automation",
-      description: "Designed and implemented Infrastructure as Code using Terraform and Ansible to manage cloud resources across multiple environments.",
-      technologies: ["Terraform", "Ansible", "AWS", "Python", "CloudFormation"],
-      icon: <Cloud className="h-8 w-8" />,
-      gradient: "from-blue-500 to-purple-600",
-      features: [
-        "Multi-cloud deployment",
-        "Resource optimization",
-        "Cost monitoring",
-        "Disaster recovery"
-      ],
-      githubUrl: "#",
-      linkedinUrl: "#"
-    },
-    {
-      title: "Microservices Architecture",
-      description: "Developed a scalable microservices architecture with containerized applications, service mesh, and comprehensive monitoring.",
-      technologies: ["Docker", "Kubernetes", "Istio", "Prometheus", "Grafana"],
-      icon: <Server className="h-8 w-8" />,
-      gradient: "from-purple-600 to-pink-600",
-      features: [
-        "Service discovery",
-        "Load balancing",
-        "Circuit breakers",
-        "Distributed tracing"
-      ],
-      githubUrl: "#",
-      linkedinUrl: "#"
-    },
-    {
-      title: "Database Migration Tool",
-      description: "Created an automated database migration and backup solution with zero-downtime migrations and data integrity checks.",
-      technologies: ["Python", "PostgreSQL", "MongoDB", "Redis", "Shell Script"],
-      icon: <Database className="h-8 w-8" />,
-      gradient: "from-pink-600 to-red-500",
-      features: [
-        "Schema versioning",
-        "Data validation",
-        "Automatic rollbacks",
-        "Performance optimization"
-      ],
-      githubUrl: "#",
-      linkedinUrl: "#"
-    },
-    {
-      title: "Monitoring & Alerting System",
-      description: "Implemented comprehensive monitoring solution with real-time alerting, dashboards, and automated incident response.",
-      technologies: ["Prometheus", "Grafana", "ELK Stack", "PagerDuty", "Slack"],
-      icon: <Server className="h-8 w-8" />,
-      gradient: "from-red-500 to-orange-500",
-      features: [
-        "Real-time metrics",
-        "Custom dashboards",
-        "Smart alerting",
-        "Incident automation"
-      ],
-      githubUrl: "#",
-      linkedinUrl: "#"
-    },
-    {
-      title: "Security Automation Pipeline",
-      description: "Developed security-first DevOps pipeline with automated vulnerability scanning, compliance checks, and security testing.",
-      technologies: ["Trivy", "SonarQube", "OWASP ZAP", "Vault", "Kubernetes"],
-      icon: <GitBranch className="h-8 w-8" />,
-      gradient: "from-orange-500 to-cyan-400",
-      features: [
-        "Vulnerability scanning",
-        "Security testing",
-        "Compliance reporting",
-        "Secret management"
-      ],
-      githubUrl: "#",
-      linkedinUrl: "#"
     }
   ];
 
@@ -142,11 +52,11 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           <p className={`text-lg mt-6 max-w-2xl mx-auto ${
             darkMode ? 'text-gray-400' : 'text-gray-600'
           }`}>
-            Real-world DevOps projects showcasing automation, scalability, and best practices
+            Real-world automation projects showcasing Python skills and practical solutions
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
