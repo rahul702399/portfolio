@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, Server, Database, Cloud, GitBranch } from 'lucide-react';
+import { ExternalLink, Github, Server, Database, Cloud, GitBranch, Mail } from 'lucide-react';
 
 interface ProjectsProps {
   darkMode: boolean;
@@ -7,6 +7,21 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
   const projects = [
+    {
+      title: "Email Automation with Python",
+      description: "This project showcases how to send emails programmatically using Python. By integrating with Gmail's SMTP server, the script securely authenticates and sends fully customizable messages — making it a handy solution for automating alerts, reminders, or any communication tasks.",
+      technologies: ["Python 3", "smtplib", "email.message", "Gmail SMTP", "TLS"],
+      icon: <Mail className="h-8 w-8" />,
+      gradient: "from-green-400 to-emerald-500",
+      features: [
+        "Secure Gmail login using App Passwords",
+        "Compose and send custom emails via script",
+        "CLI-based for quick automation",
+        "Easily extendable for bulk or scheduled mailing"
+      ],
+      githubUrl: "https://github.com/rahul702399/email.py",
+      linkedinUrl: "https://linkedin.com/in/rahul-saini-python-automation"
+    },
     {
       title: "Automated CI/CD Pipeline",
       description: "Built a comprehensive CI/CD pipeline using Jenkins, Docker, and Kubernetes for automated testing, building, and deployment of web applications.",
@@ -121,16 +136,30 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                     {project.icon}
                   </div>
                   <div className="flex space-x-2">
-                    <button className={`p-2 rounded-lg transition-colors duration-200 ${
-                      darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
-                    }`}>
-                      <Github className="h-5 w-5" />
-                    </button>
-                    <button className={`p-2 rounded-lg transition-colors duration-200 ${
-                      darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
-                    }`}>
-                      <ExternalLink className="h-5 w-5" />
-                    </button>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`p-2 rounded-lg transition-colors duration-200 ${
+                          darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+                        }`}
+                      >
+                        <Github className="h-5 w-5" />
+                      </a>
+                    )}
+                    {project.linkedinUrl && (
+                      <a
+                        href={project.linkedinUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`p-2 rounded-lg transition-colors duration-200 ${
+                          darkMode ? 'hover:bg-gray-700' : 'hover:bg-gray-100'
+                        }`}
+                      >
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                    )}
                   </div>
                 </div>
                 
